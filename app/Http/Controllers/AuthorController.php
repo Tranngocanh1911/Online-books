@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuthorCreateRequest;
 use App\Models\Author;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -24,7 +25,7 @@ class AuthorController extends Controller
     }
 
 
-    public function cre(Author $author, Request $request): RedirectResponse
+    public function cre(Author $author, AuthorCreateRequest $request): RedirectResponse
     {
         if ($request->hasFile('image')) {
             $image = $request->file('image');
