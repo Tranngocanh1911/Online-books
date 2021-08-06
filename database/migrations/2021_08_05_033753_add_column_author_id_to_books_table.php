@@ -27,7 +27,7 @@ class AddColumnAuthorIdToBooksTable extends Migration
     public function down()
     {
         Schema::table('books', function (Blueprint $table) {
-            //
+            $table->unsignedBigInteger('author_id');
         });
     }
 }
