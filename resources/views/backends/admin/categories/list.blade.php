@@ -12,10 +12,7 @@
             <thead>
             <tr>
                 <th scope="col">id</th>
-
                 <th scope="col">name</th>
-
-
             </tr>
             </thead>
 
