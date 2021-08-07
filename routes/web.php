@@ -31,6 +31,7 @@ Route::prefix('admin')->group(function () {
 
         Route::middleware('auth')->group(function () {
 
+            Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
 
             Route::prefix('books')->group(function () {
                 Route::get('/list', [BookController::class, 'list'])->name('books.list');
@@ -47,17 +48,17 @@ Route::prefix('admin')->group(function () {
                 Route::get('/destroy/{id}', [\App\Http\Controllers\BookController::class, 'destroy'])->name('books.destroy');
             });
 
-    Route::prefix('authors')->group(function () {
-        Route::get('/list', [\App\Http\Controllers\AuthorController::class, 'list'])->name('authors.list');
+            Route::prefix('authors')->group(function () {
+                Route::get('/list', [\App\Http\Controllers\AuthorController::class, 'list'])->name('authors.list');
 
-        Route::get('/create', [\App\Http\Controllers\AuthorController::class, 'create'])->name('authors.create');
-        Route::post('/create', [\App\Http\Controllers\AuthorController::class, 'cre']);
+                Route::get('/create', [\App\Http\Controllers\AuthorController::class, 'create'])->name('authors.create');
+                Route::post('/create', [\App\Http\Controllers\AuthorController::class, 'cre']);
 
-        Route::get('/edit/{id}', [\App\Http\Controllers\AuthorController::class, 'edit'])->name('authors.edit');
-        Route::post('/edit/{id}', [\App\Http\Controllers\AuthorController::class, 'update']);
+                Route::get('/edit/{id}', [\App\Http\Controllers\AuthorController::class, 'edit'])->name('authors.edit');
+                Route::post('/edit/{id}', [\App\Http\Controllers\AuthorController::class, 'update']);
 
-        Route::get('/destroy/{id}', [\App\Http\Controllers\AuthorController::class, 'destroy'])->name('authors.destroy');
-    });
+                Route::get('/destroy/{id}', [\App\Http\Controllers\AuthorController::class, 'destroy'])->name('authors.destroy');
+            });
 
             Route::prefix('categories')->group(function () {
                 Route::get('/list', [\App\Http\Controllers\CategoryController::class, 'list'])->name('categories.list');
@@ -76,13 +77,13 @@ Route::prefix('admin')->group(function () {
                 Route::post('create', [UserController::class, 'store'])->name('users.store');
                 Route::get('/{id}/delete', [UserController::class, 'delete'])->name('users.delete');
             });
-            Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
 
             Route::get('/edit/{id}', [\App\Http\Controllers\CategoryController::class, 'edit'])->name('categories.edit');
             Route::post('/edit/{id}', [\App\Http\Controllers\CategoryController::class, 'update'])->name('categories.update');
 
             Route::get('/destroy/{id}', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('categories.destroy');
         });
+
         Route::get('/', function () {
             return view('admin.dashboard');
         });
