@@ -15,12 +15,10 @@
                 <th scope="col">name</th>
             </tr>
             </thead>
-
             @foreach($categories as $category)
                 <tbody>
                 <tr>
                     <th scope="row">{{$category->id}}</th>
-
                     <th> {{$category->name}}</th>
                     <th><a href="{{route('categories.edit',$category)}}" class="btn-warning edit">edit</a></th>
                     <th><a href="{{route('categories.destroy',$category)}}" class="btn-danger destroy"
