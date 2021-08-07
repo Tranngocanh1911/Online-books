@@ -27,7 +27,7 @@ class AddColumnCategoryIdToBooksTable extends Migration
     public function down()
     {
         Schema::table('books', function (Blueprint $table) {
-            //
+
         });
     }
 }
