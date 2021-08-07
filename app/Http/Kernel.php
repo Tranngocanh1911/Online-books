@@ -2,7 +2,9 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\CheckLogin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use function Faker\Provider\pt_BR\check_digit;
 
 class Kernel extends HttpKernel
 {
