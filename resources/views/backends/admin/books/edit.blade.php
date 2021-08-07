@@ -8,6 +8,7 @@
             <div class="mb-3">
                 <label for="" class="form-label">img</label>
                 <input type="file" class="form-control" id="image" name="image" value="{{ $book->image }}">
+                <img src="{{asset('storage/'.$book->image)}}" style="width: 100px; height: 100px" alt="">
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">name</label>
@@ -15,13 +16,14 @@
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">author</label>
+                <label for="" class="form-label"><span>author  </span><span><a class="btn btn-success"
+                                                                               href="{{route('authors.create')}}">add author</a></span></label>
                 <?php
                 $authors = \App\Models\Author::all();
                 ?>
                 @if(isset($authors) && count($authors)>0)
                     <select class="form-control" id="" name="author">
-                        <option>author</option>
+                        <option value="{{$book->author->id}}">{{$book->author->name}}</option>
                         @foreach($authors as $author)
                             <option value="{{$author->id}}">{{$author->name}}</option>
                         @endforeach
@@ -30,13 +32,14 @@
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">category</label>
+                <label for="" class="form-label"><span>category  </span> <span><a class="btn btn-success"
+                                                                                  href="{{route('categories.create')}}">add category</a></span></label>
                 <?php
                 $categories = \App\Models\Category::all();
                 ?>
                 @if(isset($categories) && count($categories) > 0)
                     <select class="form-control" id="" name="category">
-                        <option>category</option>
+                        <option value="{{$book->category->id}}">{{$book->category->name}}</option>
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach

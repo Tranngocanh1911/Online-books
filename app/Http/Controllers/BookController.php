@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookCreateRequest;
 use App\Models\Book;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -23,7 +24,7 @@ class BookController extends Controller
         return view('backends.admin.books.create');
     }
 
-    public function cre(Request $request, Book $book): \Illuminate\Http\RedirectResponse
+    public function cre(BookCreateRequest $request, Book $book): \Illuminate\Http\RedirectResponse
     {
         if ($request->hasFile('image')) {
             $image = $request->file('image');
