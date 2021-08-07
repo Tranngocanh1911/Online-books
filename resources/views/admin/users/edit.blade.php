@@ -9,14 +9,16 @@
                 @csrf
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{$user->name}}" placeholder="Enter name">
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
+                           value="{{$user->name}}" placeholder="Enter name">
                     @error('name')
                     <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" class="form-control" value="{{$user->email}}" placeholder="Enter email" readonly>
+                    <input type="email" name="email" class="form-control" value="{{$user->email}}"
+                           placeholder="Enter email" readonly>
                 </div>
                 {{--                <div class="form-group row">--}}
                 {{--                    <label class="col-sm 2 col-form-label">Role</label>--}}

@@ -13,7 +13,8 @@
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"/>
 
 
@@ -42,12 +43,12 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form method="post"  class="user" action="{{ route('admin.login') }}">
+                                <form method="post" class="user" action="{{ route('admin.login') }}">
                                     @csrf
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address..."  name="email">
+                                               placeholder="Enter Email Address..." name="email">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
@@ -60,7 +61,7 @@
                                                 Me</label>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary btn-user btn-block" > Login</button>
+                                    <button class="btn btn-primary btn-user btn-block"> Login</button>
                                     {{--                                    <a href="index.html" class="btn btn-primary btn-user btn-block">--}}
                                     {{--                                        Login--}}
                                     {{--                                    </a>--}}
@@ -68,10 +69,10 @@
                                     <a href="index.html" class="btn btn-google btn-user btn-block">
                                         <i class="fab fa-google fa-fw"></i> Login with Google
                                     </a>
-{{--                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">--}}
-{{--                                        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook--}}
+                                    {{--                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">--}}
+                                    {{--                                        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook--}}
 
-{{--                                    </a>--}}
+                                    {{--                                    </a>--}}
                                 </form>
                                 <hr>
                                 {{--                                <div class="text-center">--}}

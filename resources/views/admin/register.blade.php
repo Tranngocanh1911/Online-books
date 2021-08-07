@@ -13,7 +13,8 @@
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"/>
 
 
@@ -40,7 +41,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Create your account!</h1>
                                 </div>
-                                <form method="post"  class="user" action="{{ route('admin.register') }}">
+                                <form method="post" class="user" action="{{ route('admin.register') }}">
                                     @csrf
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user"
@@ -49,7 +50,7 @@
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address..."  name="email">
+                                               placeholder="Enter Email Address..." name="email">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
@@ -57,24 +58,25 @@
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Confirm Password" name="confirmpassword">
+                                               id="exampleInputPassword" placeholder="Confirm Password"
+                                               name="confirmpassword">
                                     </div>
                                     <div class="form-group">
-{{--                                        <div >--}}
-{{--                                            <input class="form-check-input" type="checkbox"  name="roles" value="">--}}
+                                        {{--                                        <div >--}}
+                                        {{--                                            <input class="form-check-input" type="checkbox"  name="roles" value="">--}}
 
-{{--                                            <label class="custom-control-label" for="roleCheck">--}}
-{{--                                                sign in as user--}}
-{{--                                            </label>--}}
-{{--                                        </div>--}}
+                                        {{--                                            <label class="custom-control-label" for="roleCheck">--}}
+                                        {{--                                                sign in as user--}}
+                                        {{--                                            </label>--}}
+                                        {{--                                        </div>--}}
 
                                     </div>
-                                    <button class="btn btn-primary btn-user btn-block" >Create</button>
-                                                                     </a>
+                                    <button class="btn btn-primary btn-user btn-block">Create</button>
+                                    </a>
                                     <hr>
-{{--                                    <a href="index.html" class="btn btn-google btn-user btn-block">--}}
-{{--                                        <i class="fab fa-google fa-fw"></i> Login with Google--}}
-{{--                                    </a>--}}
+                                    {{--                                    <a href="index.html" class="btn btn-google btn-user btn-block">--}}
+                                    {{--                                        <i class="fab fa-google fa-fw"></i> Login with Google--}}
+                                    {{--                                    </a>--}}
                                 </form>
                                 <hr>
                                 <a href="{{route('login')}}">My mistake! I already have an account</a>

@@ -28,8 +28,8 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('crud-user', function () {
             $userLogin = Auth::user();
-            foreach ($userLogin->roles as $role){
-                if ($role->name == 'Admin'){
+            foreach ($userLogin->roles as $role) {
+                if ($role->name == 'Admin') {
                     return true;
                 }
             }

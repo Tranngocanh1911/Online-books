@@ -48,7 +48,8 @@
                                     @endforelse
                                 </td>
                                 <td>
-                                    <a href="{{route('users.delete', $user->id)}}" class="btn btn-outline-danger">Delete</a>
+                                    <a href="{{route('users.delete', $user->id)}}"
+                                       class="btn btn-outline-danger">Delete</a>
                                     <a href="{{route('users.edit', $user->id)}}" class="btn btn-outline-info">Edit</a>
                                 </td>
                             </tr>
