@@ -65,6 +65,14 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('books.list')}}">Books list</a>
         </li>
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('authors.list')}}">Author list</a>
+        </li>
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('categories.list')}}">Categories</a>
+        </li>
         <!-- Heading -->
 
 
@@ -269,7 +277,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->email }}</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
 
                             {{--                            <img class="img-profile rounded-circle"--}}
                             {{--                                 src="img/undraw_profile.svg">--}}

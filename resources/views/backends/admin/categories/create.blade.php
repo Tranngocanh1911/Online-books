@@ -1,4 +1,4 @@
-@extends('backends.admin.layouts.master1')
+@extends('backends.admin.master')
 @section('content')
     <div class="container">
         <form method="post" enctype="multipart/form-data">
