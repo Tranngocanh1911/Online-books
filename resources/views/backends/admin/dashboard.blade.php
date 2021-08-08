@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('backends.admin.master')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">

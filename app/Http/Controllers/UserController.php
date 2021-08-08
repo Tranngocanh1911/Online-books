@@ -19,7 +19,7 @@ class UserController extends Controller
            abort('403');
        }
         $roles = Role::all();
-        return view('admin.users.create',compact('roles'));
+        return view('backends.admin.users.create',compact('roles'));
     }
     function store(StoreUserRequest $request){
         $user = new User();
@@ -33,12 +33,12 @@ class UserController extends Controller
     }
     function index(){
         $users = User::all();
-        return view('admin.users.list', compact('users'));
+        return view('backends.admin.users.list', compact('users'));
 
     }
     function edit($id){
         $user = User::findOrFail($id);
-        return view('admin.users.edit', compact('user'));
+        return view('backends.admin.users.edit', compact('user'));
     }
     function update(Request $request, $id){
         $user = User::findOrFail($id);

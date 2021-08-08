@@ -1,4 +1,4 @@
-@extends('backends.admin.layouts.master1')
+@extends('backends.admin.master')
 @section('title','list categories')
 @section('content')
     <div>

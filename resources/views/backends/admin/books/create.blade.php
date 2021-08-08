@@ -1,4 +1,4 @@
-@extends('backends.admin.layouts.master1')
+@extends('backends.admin.master')
 @section('content')
     <div class="container">
         <form method="post" enctype="multipart/form-data">
@@ -32,7 +32,7 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="" class="form-label"><span> author </span> <span><a class="btn btn-success"
+                <label for="" class="form-label"> <span><a class="btn btn-success"
                                                                                 href="{{route('authors.create')}}">add author</a></span></label>
                 @if(isset($authors) )
                     <select class="form-control @error('author') is-invalid @enderror" id="" name="author">
@@ -49,8 +49,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label"><span> category </span> <span><a class="btn btn-success"
-                                                                                  href="{{route('categories.create')}}">add category</a></span></label>
+                <label for="" class="form-label"><span><a class="btn btn-success"
+                                                                                  href="{{route('categories.create')}}">Add category</a></span></label>
 
                 @if(isset($categories) )
                     <select class="form-control @error('category') is-invalid @enderror" id="" name="category">
